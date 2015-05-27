@@ -45,19 +45,19 @@ def separate_variables(line_list):
 
 
 def compose_answer_list(x, y, n):
-    z = x * y
     answer_list = []
 
     for i in range(1, n + 1) :
-        if i % z == 0:
-            answer_list.append('FB')
-        elif i % x == 0:
-            answer_list.append('F')
-        elif i % y == 0:
-            answer_list.append('B')
-        else:
-            answer_list.append(str(i))
-    
+        ans = ''
+
+        if i % x == 0:
+            ans += 'F'
+
+        if i % y == 0:
+            ans += 'B'
+
+        answer_list.append(ans or str(i))
+
     return answer_list
 
 
