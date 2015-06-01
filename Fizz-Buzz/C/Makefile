@@ -1,5 +1,5 @@
 CC      = gcc
-CCFLAGS = -g -Wall -Werror
+CCFLAGS = -g -std=c11 -Wall -Werror
 LDFLAGS = -g
 EXES    = fizz_buzz fizz_test
 

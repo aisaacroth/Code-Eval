@@ -34,30 +34,27 @@ int main(int argc, char *argv[])
         long first_div = strtol(line, &end, 10);
         long sec_div = strtol(end, &end, 10);
         long count = strtol(end, &end, 10);
-        printf("Divisor 1: %ld, Divisor 2: %ld, Count: %ld\n", first_div,
-                sec_div, count);
 
-        // Test the divisibility here.
         for (int i = 1; i < count + 1; ++i) {
-            char *ans = NULL;
+            printf(" ");
 
-            if (i % first_div) {
-                // Probably doing something with strcat here
+            if (i % first_div == 0) {
+                printf("F");
             }
 
-            if (i % sec_div) {
-                // Again, use strcat
+            if (i % sec_div == 0) {
+                printf("B");
             }
 
-            if (ans == NULL) {
-                sprintf(ans, "%d", i);
+            if (i % first_div && i % sec_div) {
+                printf("%d", i);
             }
 
         }
 
+        printf("\n");
     }
 
     fclose(fp);
-
     return 0;
 }
