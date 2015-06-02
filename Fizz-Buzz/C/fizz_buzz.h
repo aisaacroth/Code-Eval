@@ -1,5 +1,5 @@
-#ifndef __FIZZ_BUZZ_H__
-#define __FIZZ_BUZZ_H__
+#ifndef FIZZ_BUZZ_H
+#define FIZZ_BUZZ_H
 
 #include<stdio.h>
 #include<stdlib.h>

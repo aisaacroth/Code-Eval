@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     }
 
     char *filename = argv[1];
-    FILE *fp = fopen(filename, "rb");
+    FILE *fp = fopen(filename, 'rb');
 
     if (fp == NULL) {
         die(filename);
