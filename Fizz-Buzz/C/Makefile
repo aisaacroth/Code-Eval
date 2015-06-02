@@ -1,7 +1,7 @@
-CC      = gcc
+CC      = gcc-5
 CCFLAGS = -g -std=c11 -Wall -Werror
 LDFLAGS = -g
-EXES    = fizz_buzz fizz_test
+EXES    = fizz_buzz
 
 .PHONY: default
 default: $(EXES)
@@ -9,18 +9,12 @@ default: $(EXES)
 fizz_buzz: fizz_buzz.o
 	$(CC) fizz_buzz.o $(LDFLAGS) -o fizz_buzz
 
-fizz_buzz.o: fizz_buzz.c fizz_buzz.h
+fizz_buzz.o: fizz_buzz.h fizz_buzz.c
 	$(CC) -c fizz_buzz.c $(CCFLAGS)
-
-fizz_test: fizz_test.o
-	$(CC) fizz_test.o $(LDFLAGS) -o fizz_test
-
-fizz_test.o: fizz_test.c fizz_test.h fizz_buzz.h
-	$(CC) -c fizz_test.c $(CCFLAGS)
 
 .PHONY: clean
 clean:
-	rm -rf *~ *.o a.out $(EXES)
+	rm -rf *~ *.o a.out fizz_buzz.dSYM $(EXES)
 
 .PHONY: all
 all: clean default
