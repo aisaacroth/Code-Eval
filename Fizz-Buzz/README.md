@@ -3,7 +3,7 @@ Fizz-Buzz
 
 ##Description##
 Players generally sit in a circle. The first player says the number "1", and
-each player says the next number in turn. Howerver, any number divisible by X
+each player says the next number in turn. However, any number divisible by X
 (for example, three) is replaced by the word _fizz_, and any divisible by Y
 (for example, five) by the word _buzz_. Numbers divisible by both become
 _fizz buzz_. A player who hesitates, or makes a mistake is eliminated from the
