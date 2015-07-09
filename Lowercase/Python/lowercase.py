@@ -4,7 +4,6 @@
 Author: Alexander Roth
 Date:   2015-07-03
 '''
-import re
 import sys
 
 def print_arguments(program_name):
@@ -13,7 +12,11 @@ def print_arguments(program_name):
 
 def main(filename):
     with open(filename, 'r') as src_file:
-        line = src_file.readline()
+        for line in src_file:
+            if line.islower():
+                print(line.rstrip())
+            else:
+                print(line.lower().rstrip())
 
 
 if __name__ == '__main__':
