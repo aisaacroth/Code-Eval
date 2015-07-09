@@ -12,10 +12,7 @@ class FizzBuzz {
         const int count;
     public:
         FizzBuzz(int first, int second, int count);
-        void set_first(int first);
-        void set_second(int second);
-        void set_count(int count);
         void evaluate();
-}
+};
 
 #endif

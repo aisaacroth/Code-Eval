@@ -28,3 +28,6 @@ int main(int argc, char *argv[])
 }
 
 FizzBuzz::FizzBuzz(int first, int second, int count)
+    :first{first}, second{second}, count{count} {}
+
+void FizzBuzz::evaluate() {}
