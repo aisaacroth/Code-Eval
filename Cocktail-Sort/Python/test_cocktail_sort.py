@@ -10,6 +10,7 @@ Date:   2016-01-15
 from cocktail_sort import cocktail_sort, read_file, split_line
 import unittest
 
+
 class TestCocktailSort(unittest.TestCase):
 
     def setUp(self):
@@ -17,7 +18,7 @@ class TestCocktailSort(unittest.TestCase):
         self.one_iter_line = '5 4 9 10 7 3 2 1 6 | 1'
         self.three_iter_line = '9 8 7 6 5 4 3 2 1 | 3'
         self.one_iter_list = [5, 4, 9, 10, 7, 3, 2, 1, 6]
-        self.three_iter_list = [9, 8 , 7, 6, 5, 4, 3, 2, 1]
+        self.three_iter_list = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 
     def test_read_file(self):
         test_ans = read_file(self.filename)
@@ -33,11 +34,10 @@ class TestCocktailSort(unittest.TestCase):
         self.assertIsNotNone(second_iter)
         self.assertEqual(exp_ans, second_iter)
 
-
     def test_split_line(self):
         test_ans = split_line(self.one_iter_line)
         exp_ans = ([5, 4, 9, 10, 7, 3, 2, 1, 6], 1)
-        
+
         self.assertIsNotNone(test_ans)
         self.assertEqual(exp_ans[0], test_ans[0])
         self.assertEqual(exp_ans[1], test_ans[1])
@@ -54,7 +54,7 @@ class TestCocktailSort(unittest.TestCase):
     def test_cocktail_sort(self):
         test_ans = cocktail_sort(self.one_iter_list, 1)
         exp_ans = [1, 4, 5, 9, 7, 3, 2, 6, 10]
-        
+
         self.assertIsNotNone(test_ans)
         self.assertEqual(exp_ans, test_ans)
 
@@ -63,7 +63,7 @@ class TestCocktailSort(unittest.TestCase):
 
         self.assertIsNotNone(test_ans)
         self.assertEqual(exp_ans, test_ans)
-        
+
 
 if __name__ == '__main__':
     unittest.main()

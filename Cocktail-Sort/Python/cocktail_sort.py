@@ -8,6 +8,7 @@ Date:   2016-01-15
 
 import sys
 
+
 def main(args):
     in_file = args[1]
     line_generator = read_file(in_file)
@@ -55,8 +56,8 @@ def cocktail_sort(num_list, iterations):
         for j in range(stop_right, stop_left - 1, -1):
             if num_list[j] > num_list[j + 1]:
                 num_list[j], num_list[j + 1] = num_list[j + 1], num_list[j]
-        
-        i+= 1
+
+        i += 1
 
     return num_list
 
