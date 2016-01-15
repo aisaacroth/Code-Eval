@@ -17,7 +17,8 @@ def main(args):
         while True:
             line = next(line_generator)
             num_list, iterations = split_line(line)
-            print(cocktail_sort(num_list, iterations))
+            result = cocktail_sort(num_list, iterations)
+            print(' '.join([str(i) for i in result]))
     except StopIteration:
         pass
 
